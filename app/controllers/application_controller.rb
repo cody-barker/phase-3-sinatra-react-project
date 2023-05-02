@@ -34,7 +34,7 @@ class ApplicationController < Sinatra::Base
   get '/beds' do
     beds = Bed.all
     beds.to_json
-  do
+  end
 
   post '/beds' do
     bed = Bed.create(
