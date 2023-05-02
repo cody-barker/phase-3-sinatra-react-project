@@ -1,5 +1,11 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
+5.times do
+
+Farm.create(
+    name: Faker::
+)
+
+end
 
 puts "✅ Done seeding!"
