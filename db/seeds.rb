@@ -3,7 +3,7 @@ puts "🌱 Seeding..."
 Farm.create([
     {
         name: "Infinite Tree",
-        city: "Grants Pass, OR",
+        city: "Grants Pass",
         state: "Oregon"
     },
     {
@@ -18,8 +18,8 @@ Farm.create([
     },
     {
         name: "Shady Acres",
-        city: "Vernonia",
-        state: "Oregon"
+        city: "Valdosta",
+        state: "Georgia"
     }
 ])
     
