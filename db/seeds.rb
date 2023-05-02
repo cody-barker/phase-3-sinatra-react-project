@@ -24,12 +24,16 @@ Farm.create([
 ])
     
 50.times do
+    planting = Faker::Date.between(from: '2023-03-01', to: '2023-04-02')
+    harvest = Faker::Date.between(from: '2023-05-01', to: '2023-05-15')
+    days = harvest - planting
     Bed.create(
         sq_ft:  rand(3..60)*10.ceil,
         crop: Faker::Food.vegetables,
-        planting_date: Faker::Date.between(from: '2023-03-01', to: '2023-04-02'),
-        harvest_date: Faker::Date.between(from: '2023-05-10', to: '2023-06-03'),
+        planting_date: planting,
+        harvest_date: harvest,
         in_use: true,
+        dtm: days,
         farm_id: rand(1..4)
     )
 end
