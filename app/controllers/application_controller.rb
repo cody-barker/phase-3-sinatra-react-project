@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   get '/farms' do
     farms = Farm.all
-    farms.to_json
+    farms.to_json(include: :beds)
   end
 
   get '/farms/:id' do
@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
 
   get '/beds' do
     beds = Bed.all
-    beds.to_json
+    beds.to_json(include: :farm)
   end
 
   get '/beds/:id' do
