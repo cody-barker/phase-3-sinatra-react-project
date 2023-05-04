@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
 
   get '/farms/:id' do
     farm = Farm.find(params[:id])
-    farm.to_json
+    farms.to_json(include: :beds)
   end
 
   post '/farms' do
@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
       city: params[:city],
       state: params[:state]
     )
-    farm.to_json
+    farm.to_json(include: :beds)
   end
 
   patch '/farms/:id' do
@@ -27,13 +27,13 @@ class ApplicationController < Sinatra::Base
       city: params[:city],
       state: params[:state]
     )
-    farm.to_json
+    farm.to_json(include: :beds)
   end
 
   delete '/farms/:id' do
     farm = Farm.find(params[:id])
     farm.destroy
-    farm.to_json
+    farm.to_json(include: :beds)
   end
 
   get '/beds' do
@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
 
   get '/beds/:id' do
     bed = Bed.find(params[:id])
-    bed.to_json
+    beds.to_json
   end
 
   post '/beds' do
