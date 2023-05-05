@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
 
   get '/beds/:id' do
     bed = Bed.find(params[:id])
-    beds.to_json
+    beds.to_json(include: :farm)
   end
 
   post '/beds' do
@@ -55,7 +55,7 @@ class ApplicationController < Sinatra::Base
       harvest_date: params[harvest_date],
       dtm: params[dtm]
     )
-    bed.to_json
+    bed.to_json(include: :farm)
   end
 
   patch '/beds/:id' do
@@ -68,13 +68,13 @@ class ApplicationController < Sinatra::Base
       harvest_date: params[harvest_date],
       dtm: params[dtm]
     )
-    bed.to_json
+    bed.to_json(include: :farm)
   end
 
   delete '/beds/:id' do
     bed = Bed.find(params[:id])
     bed.destroy
-    bed.to_json
+    bed.to_json(include: :farm)
   end
 
 end
