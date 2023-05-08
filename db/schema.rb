@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_02_205727) do
+ActiveRecord::Schema.define(version: 2023_05_08_231357) do
 
   create_table "beds", force: :cascade do |t|
     t.integer "sq_ft"
-    t.boolean "in_use"
+    t.string "in_use"
     t.string "crop"
     t.date "planting_date"
     t.date "harvest_date"
