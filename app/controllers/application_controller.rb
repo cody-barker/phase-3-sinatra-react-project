@@ -48,12 +48,13 @@ class ApplicationController < Sinatra::Base
 
   post '/beds' do
     bed = Bed.create(
+      farm_id: params[:farm_id]
       sq_ft: params[:sq_ft],
       in_use: params[:in_use],
       crop: params[:crop],
       planting_date: params[:planting_date],
-      harvest_date: params[harvest_date],
-      dtm: params[dtm]
+      harvest_date: params[:harvest_date],
+      dtm: params[:dtm]
     )
     bed.to_json(include: :farm)
   end
