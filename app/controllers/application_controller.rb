@@ -48,7 +48,7 @@ class ApplicationController < Sinatra::Base
 
   post '/beds' do
     bed = Bed.create(
-      farm_id: params[:farm_id]
+      farm_id: params[:farm_id],
       sq_ft: params[:sq_ft],
       in_use: params[:in_use],
       crop: params[:crop],
