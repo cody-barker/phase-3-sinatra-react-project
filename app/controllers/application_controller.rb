@@ -12,12 +12,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/farms' do
-    farm = Farm.create(
-      name: params[:name],
-      city: params[:city],
-      state: params[:state]
-    )
-    farm.to_json(include: :beds)
+      farm = Farm.create(
+        name: params[:name],
+        city: params[:city],
+        state: params[:state]
+      )
+      farm.to_json(include: :beds)
   end
 
   patch '/farms/:id' do
