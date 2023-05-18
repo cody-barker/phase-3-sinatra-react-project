@@ -1,6 +1,15 @@
 ## Farm Tracker
 
-The Farm Tracker app maintains a record of the growing beds on a number of farms. It tables specifics like whether the bed is in production, what crop is growing, when it was planted, and when it should be harvested, etc.  Users can select to see the data from individual farms or all of the farms at once, add/remove farms, update the name and location of specific farms, and delete individual beds from a farm. Users are also able to add/remove beds, and eventually update the details of those beds in order to better plan and manage their production.
+The Farm Tracker app maintains a record of the growing beds on a number of farms. It tables specifics like which farm the bed belongs to, it's square footage, whether the bed is in production, what crop is growing, the crops' anticipated days to maturity, when it was planted, and when it should be harvested. 
+
+## Features
+
+Users can:
+
+- View a table of all the beds from all the farms
+- View a table of all farms and their locations
+- Add/Remove/Update farms
+- Add/Remove beds
 
 ## Available Scripts
 
@@ -27,6 +36,10 @@ Drops the database tables and reseeds them with sample data.
 ### `bundle exec rake server`
 
 Starts a local server to serve the database.
+
+### `ctrl + c`
+
+Stops the server.
 
 ## Frontend
 
