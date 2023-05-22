@@ -7,6 +7,11 @@ class ApplicationController < Sinatra::Base
     farms.to_json(include: :beds)
   end
 
+  get '/farms/:id' do
+    farm = Farm.find(params[:id])
+    farm.to_json(include: :beds)
+  end
+
   #AddAFarmOrBed
   post '/farms' do
       farm = Farm.create(
