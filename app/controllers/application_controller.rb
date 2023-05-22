@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
   
   #App
   get '/farms' do
-    farms = Farm.all.order(:name)
+    farms = Farm.all
     farms.to_json(include: :beds)
   end
 
