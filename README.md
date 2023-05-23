@@ -1,13 +1,13 @@
 ## Farm Tracker
 
-The Farm Tracker app maintains a record of the growing beds on a number of farms. It tables specifics like which farm the bed belongs to, it's square footage, whether the bed is in production, what crop is growing, the crops' anticipated days to maturity, when it was planted, and when it should be harvested. 
+The Farm Tracker maintains a record of the production beds on a number of farms. Users can select a farm to view it's production beds, with details about each bed's square footage, crop, anticipated days to maturity, planting and harvesting dates. Users can add both farms and beds to the tracker, as well as remove them. Users may also update the name and location of a farm.
 
 ## Features
 
 Users can:
 
-- View a table of all the beds from all the farms
-- View a table of all farms and their locations
+- View a list of all farms in the tracker
+- View a farm's production beds and their details
 - Add/Remove/Update farms
 - Add/Remove beds
 

@@ -7,11 +7,6 @@ class ApplicationController < Sinatra::Base
     farms.to_json(include: :beds)
   end
 
-  get '/farms/:id' do
-    farm = Farm.find(params[:id])
-    farm.to_json(include: :beds)
-  end
-
   #AddAFarmOrBed
   post '/farms' do
       farm = Farm.create(
@@ -45,7 +40,6 @@ class ApplicationController < Sinatra::Base
     bed = Bed.create(
       farm_id: params[:farm_id],
       sq_ft: params[:sq_ft],
-      in_use: params[:in_use],
       crop: params[:crop],
       planting_date: params[:planting_date],
       harvest_date: params[:harvest_date],

@@ -32,7 +32,6 @@ Farm.create([
         crop: Faker::Food.vegetables,
         planting_date: planting,
         harvest_date: harvest,
-        in_use: "Yes",
         dtm: days,
         farm_id: rand(1..4)
     )
