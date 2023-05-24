@@ -13,11 +13,13 @@ Users can:
 
 ## Available Scripts
 
+You can find the React frontend for this Ruby API at: https://github.com/cody-barker/phase-3-project-frontend
+
 ## Backend
 
 From the project directory you can run:
 
-### `bundle install`
+### `bundle`
 
 Installs all of the ruby gems associated with backend.
 
@@ -43,9 +45,9 @@ Stops the server.
 
 ## Frontend
 
-From the /frontend directory you can run:
+From the frontend directory you can run:
 
-### `npm install`
+### `npm i`
 
 Installs the dependencies for the app.
 
