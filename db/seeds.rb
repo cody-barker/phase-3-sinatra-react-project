@@ -28,7 +28,7 @@ Farm.create([
     harvest = Faker::Date.between(from: '2023-06-18', to: '2023-07-15')
     days = harvest - planting
     Bed.create(
-        sq_ft:  rand(3..60)*10.ceil,
+        sq_ft:  rand(30..600).ceil,
         crop: Faker::Food.vegetables,
         planting_date: planting,
         harvest_date: harvest,
